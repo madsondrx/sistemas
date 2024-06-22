@@ -1,11 +1,11 @@
 import mysql.connector  #importando bibloteca mysql no python
 
-class Alunos: #Criada a classe alunos
+class Alunos: #Criada a classe Alunos
     def __init__(self,nome,cpf):  #defindo a inicializaçao da classe e parametros
         self.nome = nome #atributos
         self.cpf = cpf #atributos
 
-class Matriculas: #Criada a classe Matricula
+class Matriculas: #Criada a classe Matriculas
     def __init__(self,curso_nome):  #defindo a inicializaçao da classe e parametros
         self.curso_nome= curso_nome #atributos
 
@@ -31,7 +31,7 @@ class SistemaEscolar: #Criada a classe SistemaEscolar
         print("Aluno foi matriculado.")
 
 
-    def listar_alunos(self): # Criado metodo matricular_alunos
+    def listar_alunos(self): # Criado metodo listar_alunos
     
         self.cursor.execute("SELECT nome, cpf FROM alunos")  # Selecionando os atributos e tabela
         alunos = self.cursor.fetchall()   #utilizando fetchal para buscar dados nessa tabela
@@ -51,7 +51,7 @@ cpf_aluno=input("CPF do aluno:")
 aluno1= Alunos(nome_aluno, cpf_aluno) 
 sistema.matricular_alunos(aluno1)
 
-#Para a lista de clientes
+#Para a lista de alunos
 print("Lista de alunos:")
 sistema.listar_alunos()
 
